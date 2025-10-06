@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.myslide-container{
+    width: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.myslides{
+    padding: 2rem;
+}
+
+.myslides img{
+    width: 100%;
+    
+}
+
+
+
+.myslides {
+    display: none;
+}
+
+.myslides.active{
+    display: block;
+    
+}
+
+.slide-numbering{
+    position: absolute;
+    top: 5%;
+    font-size: 2.5rem;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+.caption {
+    position: absolute;
+    bottom: 10%;
+    left: 45%;
+    font-size: 1.3rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+.slide-prev-btn{
+    width: 50px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    transform: translate(0, -50%);
+}
+
+.slide-next-btn{
+    width: 50px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: black;
+    position: absolute;
+    top: 50%;
+    right: -10%;
+    transform: translate(0, -50%);
+}
+
+
+.dot{
+    width: 20px;
+    height: 20px;
+    background: lightgray;
+    border-radius: 50%;
+    transition: background 300ms;
+
+}
+
+.dots{
+    display: flex;
+    gap: .5rem;
+    position: absolute;
+    align-items: center;
+}
+
+ .dot:hover{
+    background: gray;
+}
+
+.dot.active {
+    background: gray;
+}
+
+.fade {
+    animation: fade 1.5s;
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0.4;
+    }
+    100%{
+        opacity: 1;
+    }
+}
